@@ -28,8 +28,6 @@ Square.prototype.draw = function () {
   allSquares.push([this.xcord, this.ycord, this.width, this.width]);
 }
 
-
-
 //************
 //** CIRCLE **
 //************
@@ -83,8 +81,29 @@ var clearSquares = function() {
     ctx.clearRect(square[0],square[1],square[2],square[3]);
   });
 }
-// var fillRandom = function () {
-//   for (var i = 0; i < 20; i++){
-//     var
-//   }
-// }
+var fillRandom = function () {
+  var colorArr = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+  for (var i = 0; i < 500; i++){
+    var randomColor = '#';
+    for (var j = 0; j < 6; j++){
+      randomColor += colorArr[Math.floor(Math.random() * colorArr.length)];
+    }
+    console.log(i, randomColor);
+    var x = Math.floor(Math.random() * 500);
+    var y = Math.floor(Math.random() * 500);
+    console.log(i, x, y);
+    var randomSize = Math.floor(Math.random() * 100) + 1;
+    console.log(i, randomSize);
+
+    var randomShape = Math.floor(Math.random()*2);
+    console.log(i, randomShape);
+
+    if (randomShape === 0){
+      var c = new Circle(x,y,randomSize,randomColor);
+      c.draw();
+    } else {
+      var s = new Square(x,y,randomSize,randomColor);
+      s.draw();
+    }
+  }
+}
