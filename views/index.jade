@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  canvas#canvas
-    
+  canvas#canvas(width='500' height='500')
+  select#shape(name='shape')
+    option(value='Square') Square
+    option(value='Circle') Circle
+  |   
+  input#color(type='color' name='color')
+  |   
+  input#size(type='number' name='size' value='20')
+  div.block
+  button#same-color(type='button') Paint all shapes current color
+  button#erase-squares(type='button') Erase all squares
+  button#random-colors(type='button') Randomly Color all shapes
+  button#random-fill(type='button') Randomely Fill Canvas

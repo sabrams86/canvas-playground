@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+#canvas {
+  border: 1px solid black;
+  display: block;
+}
+.block{
+  display: block;
+}
