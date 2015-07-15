@@ -80,14 +80,11 @@ var paintRandom = function () {
 }
 var clearSquares = function() {
   allSquares.forEach(function (square) {
-    var s = new Square(square[0],square[1],square[2], "rgba(255, 255, 225, 1)");
-    s.draw();
-  })
-  // allSquares.forEach(function (square) {
-  //   console.log(square);
-  //   ctx.clearRect(square[0],square[1],square[3],square[4]);
-  // });
+    ctx.clearRect(square[0],square[1],square[2],square[3]);
+  });
 }
-var fillRandom = function () {
-
-}
+// var fillRandom = function () {
+//   for (var i = 0; i < 20; i++){
+//     var
+//   }
+// }
