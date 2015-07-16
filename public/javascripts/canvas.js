@@ -94,7 +94,7 @@ var clearSquares = function() {
 }
 var fillRandom = function () {
   var colorArr = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
-  for (var i = 0; i < 500; i++){
+  for (var i = 0; i < 300; i++){
     var randomColor = '#';
     for (var j = 0; j < 6; j++){
       randomColor += colorArr[Math.floor(Math.random() * colorArr.length)];
